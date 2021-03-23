@@ -23,7 +23,7 @@ namespace SklepUKW.Models
         [Required(ErrorMessage = "Podaj cenę filmu")]
         public decimal Price { get; set; }
 
-        public DateTime AddDate { get; set; }
+        //public DateTime AddDate { get; set; }
 
         public int CategoryID { get; set; }
 

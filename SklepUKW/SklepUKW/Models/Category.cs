@@ -8,7 +8,7 @@ namespace SklepUKW.Models
 {
     public class Category
     {
-        public int idCategory { get; set; }
+        public int CategoryID { get; set; }
 
         [Required(ErrorMessage = "Podaj nazwę kategorii")]
         [StringLength(50)]
