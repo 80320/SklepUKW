@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using SklepUKW.Migrations;
 
 namespace SklepUKW.DAL
 {
-    public class FilmsInitializer : DropCreateDatabaseAlways<FilmsContext>
+    public class FilmsInitializer : DropCreateDatabaseIfModelChanges<FilmsContext>//DropCreateDatabaseAlways<FilmsContext> //MigrateDatabaseToLatestVersion<FilmsContext, Configuration>//
     {
+
         protected override void Seed(FilmsContext context)
         {
             base.Seed(context);

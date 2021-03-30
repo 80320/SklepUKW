@@ -95,7 +95,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\banner-film.png" />
+    <Content Include="Content\index.html" />
+    <Content Include="Content\script.js" />
+    <Content Include="Content\Shrek1.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\szklana.jpg" />
+    <Content Include="Content\szybcy.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -107,6 +113,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103231035543_InitialCreate.cs" />
+    <Compile Include="Migrations\202103231035543_InitialCreate.designer.cs">
+      <DependentUpon>202103231035543_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103300800025_Length.cs" />
+    <Compile Include="Migrations\202103300800025_Length.designer.cs">
+      <DependentUpon>202103300800025_Length.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,6 +132,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\kontakt.cshtml" />
+    <Content Include="Views\Home\regulamin.cshtml" />
+    <Content Include="Views\Home\onas.cshtml" />
+    <Content Include="Views\Home\metodyPlatnosci.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,6 +145,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202103231035543_InitialCreate.resx">
+      <DependentUpon>202103231035543_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103300800025_Length.resx">
+      <DependentUpon>202103300800025_Length.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

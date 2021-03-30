@@ -15,6 +15,7 @@ namespace SklepUKW.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            /*
             Category category = new Category()
             {
                 CategoryID = 1,
@@ -23,7 +24,13 @@ namespace SklepUKW.Controllers
             };
             db.Categories.Add(category); // dodanie utworzonego obiektu
              db.SaveChanges();// zapisanie zmian
+            */
             return View();
+        }
+
+        public ActionResult StaticSite(string name)
+        {
+            return View(name);
         }
     }
 }

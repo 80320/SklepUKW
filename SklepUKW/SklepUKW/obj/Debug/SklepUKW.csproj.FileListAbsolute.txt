@@ -74,3 +74,6 @@ C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\Skle
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.csproj.CopyComplete
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.dll
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.pdb
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.Migrations.InitialCreate.resources
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.csproj.GenerateResource.cache
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.Migrations.Length.resources

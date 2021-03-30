@@ -21,5 +21,12 @@ namespace SklepUKW.DAL
         {
             Database.SetInitializer<FilmsContext>(new FilmsInitializer());
         }
+
+        /*
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+         */
     }
 }
