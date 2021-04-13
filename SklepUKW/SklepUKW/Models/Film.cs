@@ -23,12 +23,14 @@ namespace SklepUKW.Models
         [Required(ErrorMessage = "Podaj cenę filmu")]
         public decimal Price { get; set; }
 
-        //public DateTime AddDate { get; set; }
+        public DateTime AddDate { get; set; }
 
         public int CategoryID { get; set; }
 
         public int FilmLength { get; set; }
 
         public virtual Category Category { get; set; }
+
+        public string PosterName { get; set; }
     }
 }
