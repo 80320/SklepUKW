@@ -10,12 +10,7 @@
 </head>
 <body>
     <header>
-        <div id="menu">
-            @foreach (var item in Model.Categories)
-            {
-                <a href="@Url.Action("List", "Films", new { categoryName = item.Name })">@item.Name</a>
-            }
-        </div>
+        @Html.Action("CategoriesMenu", "Films")
     </header>
 
     <div>

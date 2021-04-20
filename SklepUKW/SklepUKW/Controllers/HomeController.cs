@@ -25,11 +25,13 @@ namespace SklepUKW.Controllers
             };
             db.Categories.Add(category); // dodanie utworzonego obiektu
              db.SaveChanges();// zapisanie zmian
-            */
             var categories = db.Categories.ToList();
             IndexViewModel ivm = new IndexViewModel();
             ivm.Categories = categories;
-            return View(ivm);
+             return View(ivm);
+            */
+
+            return View();
         }
 
         public ActionResult StaticSite(string name)
