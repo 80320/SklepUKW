@@ -72,7 +72,7 @@ namespace SklepUKW.DAL
 
            var filmy = new List<Film>()
            {
-                new Film
+                new Film()
                 {
                     FilmID = 1,
                     CategoryID = 1,
@@ -84,7 +84,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2020,12,4), //DateTime.Now
                     FilmLength = 76
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 2,
                     CategoryID = 3,
@@ -96,7 +96,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2021,3,13),
                     FilmLength = 46
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 3,
                     CategoryID = 3,
@@ -108,7 +108,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2019,8,1),
                     FilmLength = 92
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 4,
                     CategoryID = 5,
@@ -120,7 +120,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2005,7,2),
                     FilmLength = 85
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 5,
                     CategoryID = 4,
@@ -132,7 +132,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2021,1,6),
                     FilmLength = 81
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 6,
                     CategoryID = 2,
@@ -144,7 +144,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2013,11,24),
                     FilmLength = 129
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 7,
                     CategoryID = 5,
@@ -156,7 +156,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2018,9,1),
                     FilmLength = 99
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 8,
                     CategoryID = 3,
@@ -168,7 +168,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2020,5,3),
                     FilmLength = 86
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 9,
                     CategoryID = 1,
@@ -180,7 +180,7 @@ namespace SklepUKW.DAL
                     AddDate = new DateTime(2010,8,12),
                     FilmLength = 100
                 },
-                new Film
+                new Film()
                 {
                     FilmID = 10,
                     CategoryID = 3,

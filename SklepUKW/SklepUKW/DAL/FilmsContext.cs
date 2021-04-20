@@ -15,7 +15,9 @@ namespace SklepUKW.DAL
         public DbSet<Category> Categories { get; set; }
 
         public FilmsContext() : base("FilmsContext")
-        { }
+        {
+            //Configuration.ProxyCreationEnabled = false; // Dodane
+        }
 
         static FilmsContext()
         {

@@ -19,9 +19,9 @@ a {
     text-shadow: 5px 5px 10px black;
 }
 
-    a:hover {
+a:hover {
         text-shadow: none;
-    }
+}
 
 table {
     width: 100%;
@@ -61,21 +61,20 @@ ul {
     text-align: center;
 }
 
-#filmsFromCategory ul li
-{
+#filmsFromCategory ul li {
     margin: 0 0 15px 0;
 }
 
-h2{
+h2 {
     text-align: center;
     font-size: 40px;
 }
 
-a img{
+a img {
     width: 200px;
 }
 
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;

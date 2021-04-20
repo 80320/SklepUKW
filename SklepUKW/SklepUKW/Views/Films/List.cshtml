@@ -9,7 +9,7 @@
 <table style="background-color: goldenrod">
     <tr><td colspan="3"> NOWOŚCI </td></tr>
     <tr>
-        @foreach (var film in Model.Top3NewestFilms)
+        @foreach(var film in Model.Top3NewestFilms)
         {
           <td><a href="@Url.Action("Details", "Films", new { id = film.FilmID})"><img src="@Url.PosterPath(film.PosterName)" /></a></td>
         }
@@ -19,10 +19,10 @@
 <h2>@Model.Category.Name - @Model.Category.Desc</h2>
 
 <table border=1px>
-    @foreach (var film in @Model.FilmsFromCategory)
+    @foreach(var film in @Model.FilmsFromCategory)
     {
         <tr>
-            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmID})"><img src="@Url.PosterPath(film.PosterName)"></a></td>
+            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmID})"><img src="@Url.PosterPath(film.PosterName)"/></a></td>
             <td>@film.Title</td>
             <td>@film.Price</td>
             <td>Dodaj do koszyka</td>

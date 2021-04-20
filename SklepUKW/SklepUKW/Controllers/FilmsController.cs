@@ -1,5 +1,5 @@
 ﻿using SklepUKW.DAL;
-using SklepUKW.Models;
+//using SklepUKW.Models;
 using SklepUKW.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace SklepUKW.Controllers
     public class FilmsController : Controller
     {
         FilmsContext db = new FilmsContext();
-
+        
         // GET: Films
         public ActionResult Index()
         {
@@ -34,8 +34,7 @@ namespace SklepUKW.Controllers
 
         public ActionResult Details(int id)
         {
-            var film = db.Films.Find(id);
-            //Film film = db.Films.Find(id);
+            var film = db.Films.Find(id); // Film film (?)
             return View(film);
         }
 
@@ -50,9 +49,11 @@ namespace SklepUKW.Controllers
         public ActionResult FilmsFromCategory(string categoryName)
         {
             var category = db.Categories.Include("Films").Where(c => c.Name.ToLower() == categoryName.ToLower()).Single();
-            return PartialView("_FilmsFromCategory", category.Films.ToList());
+            var test = category.Films.ToList();
+            return PartialView("_FilmsFromCategory", test);
         }
 
+        /*
         public ActionResult Top3Longest()
         {
             IndexViewModel model = new IndexViewModel();
@@ -60,5 +61,6 @@ namespace SklepUKW.Controllers
             model.Top3LongestFilms = najdluzsze;
             return View(model);
         }
+        */
     }
 }
