@@ -81,7 +81,8 @@ namespace SklepUKW.DAL
                     Desc = "20 sierpnia 1973 roku teksańska policja trafiła do stojącego na uboczu domu Thomasa Hewitta - byłego pracownika lokalnej rzeźni. Na miejscu odkryli rozkładające się zwłoki 33 osób, które zostały zamordowane przez psychopatycznego zabójcę noszącego na twarzy maskę z ludzkiej skóry i posługującego się piłą mechaniczną.",
                     Price = 10,
                     PosterName = "Teksanska.jpg",
-                    AddDate = new DateTime(2020, 12, 4)//DateTime.Now
+                    AddDate = new DateTime(2020,12,4), //DateTime.Now
+                    FilmLength = 76
                 },
                 new Film
                 {
@@ -92,7 +93,8 @@ namespace SklepUKW.DAL
                     Desc = "Mężczyzna dostaje obsesji na punkcie książki, która według niego opisuje i przewiduje jego życie i przyszłość.",
                     Price = 14,
                     PosterName = "Numer23.jpg",
-                    AddDate = new DateTime(2021, 03, 13)
+                    AddDate = new DateTime(2021,3,13),
+                    FilmLength = 46
                 },
                 new Film
                 {
@@ -103,7 +105,8 @@ namespace SklepUKW.DAL
                     Desc = "Uznany pisarz przenosi się na prowincję, by w spokoju tworzyć kolejne książki. Wkrótce odwiedzi go tajemniczy mężczyzna, który oskarży Raineya o plagiat.",
                     Price = 12,
                     PosterName = "SekretneOkno.jpg",
-                    AddDate = new DateTime(2019, 08, 1)
+                    AddDate = new DateTime(2019,8,1),
+                    FilmLength = 92
                 },
                 new Film
                 {
@@ -114,7 +117,8 @@ namespace SklepUKW.DAL
                     Desc = "Podróż hobbita z Shire i jego ośmiu towarzyszy, której celem jest zniszczenie potężnego pierścienia pożądanego przez Czarnego Władcę - Saurona.",
                     Price = 20,
                     PosterName = "DruzynaPierscienia.jpg",
-                    AddDate = new DateTime(2005, 07, 2)
+                    AddDate = new DateTime(2005,7,2),
+                    FilmLength = 85
                 },
                 new Film
                 {
@@ -125,7 +129,8 @@ namespace SklepUKW.DAL
                     Desc = "Emerytowani agenci specjalni CIA zostają wrobieni w zamach. By się ratować, muszą reaktywować stary zespół.",
                     Price = 11,
                     PosterName = "Red.jpg",
-                    AddDate = new DateTime(2021, 01, 16)
+                    AddDate = new DateTime(2021,1,6),
+                    FilmLength = 81
                 },
                 new Film
                 {
@@ -136,7 +141,8 @@ namespace SklepUKW.DAL
                     Desc = "Dziennikarz śledczy rozmawia z dziewięcioma księżmi katolickimi, którzy dopuścili się zbrodni pedofilii i molestowania nieletnich, a także ich ofiarami.",
                     Price = 0,
                     PosterName = "TylkoNieMow.jpg",
-                    AddDate = new DateTime(2013, 11, 24)
+                    AddDate = new DateTime(2013,11,24),
+                    FilmLength = 129
                 },
                 new Film
                 {
@@ -147,7 +153,8 @@ namespace SklepUKW.DAL
                     Desc = "Wiedeń u progu XX w. Syn rzemieślnika, iluzjonista Eisenheim, wykorzystuje niezwykłe umiejętności, by zdobyć miłość arystokratki, narzeczonej austro-węgierskiego księcia.",
                     Price = 13,
                     PosterName = "Iluzjonista.jpg",
-                    AddDate = new DateTime(2018, 09, 1)
+                    AddDate = new DateTime(2018,9,1),
+                    FilmLength = 99
                 },
                 new Film
                 {
@@ -158,7 +165,8 @@ namespace SklepUKW.DAL
                     Desc = "Grupa osób budzi się w pełnym śmiertelnych pułapek sześcianie. Nieznajomi muszą zacząć współpracować ze sobą, by przeżyć.",
                     Price = 15,
                     PosterName = "Cube.jpg",
-                    AddDate = new DateTime(2020, 05, 3)
+                    AddDate = new DateTime(2020,5,3),
+                    FilmLength = 86
                 },
                 new Film
                 {
@@ -169,7 +177,8 @@ namespace SklepUKW.DAL
                     Desc = "Frank Cotton nabywa tajemniczą kostkę, za pomocą której można przywołać demony z piekła.",
                     Price = 16,
                     PosterName = "Hellraiser.jpg",
-                    AddDate = new DateTime(2010, 08, 12)
+                    AddDate = new DateTime(2010,8,12),
+                    FilmLength = 100
                 },
                 new Film
                 {
@@ -180,7 +189,8 @@ namespace SklepUKW.DAL
                     Desc = "Seryjny morderca i inteligentna agentka łączą siły, by znaleźć przestępcę obdzierającego ze skóry swoje ofiary.",
                     Price = 17,
                     PosterName = "MilczenieOwiec.jpg",
-                    AddDate = new DateTime(2021, 04, 14)
+                    AddDate = new DateTime(2021,4,14),
+                    FilmLength = 151
                 }
            };
 

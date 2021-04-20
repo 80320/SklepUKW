@@ -30,8 +30,11 @@ namespace SklepUKW.Controllers
             ivm.Categories = categories;
              return View(ivm);
             */
-
-            return View();
+            IndexViewModel model = new IndexViewModel();
+            var najdluzsze = db.Films.OrderByDescending(f => f.FilmLength).Take(3);
+            model.Top3LongestFilms = najdluzsze;
+            return View(model);
+            //return View();
         }
 
         public ActionResult StaticSite(string name)

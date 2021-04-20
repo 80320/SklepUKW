@@ -82,3 +82,4 @@ C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Glimpse.Ad
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Glimpse.Core.dll
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Glimpse.EF6.dll
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.Migrations.Date.resources
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.Migrations.Migracja2004.resources

@@ -1,8 +1,8 @@
 ﻿@model IEnumerable<SklepUKW.Models.Category>
 
 <div id="menu">
-    @foreach (var item in @Model)
+    @foreach (var category in @Model)
     {
-        <a href="@Url.Action("List", "Films", new { categoryName = item.Name })">@item.Name</a>
+        <a href="@Url.Action("List", "Films", new { categoryName = category.Name })">@category.Name</a>
     }
 </div>

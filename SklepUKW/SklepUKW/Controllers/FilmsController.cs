@@ -1,4 +1,5 @@
 ﻿using SklepUKW.DAL;
+using SklepUKW.Models;
 using SklepUKW.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -24,11 +25,18 @@ namespace SklepUKW.Controllers
             var category = db.Categories.Include("Films").Where(c => c.Name.ToLower() == categoryName.ToLower()).Single();
 
             IndexViewModel model = new IndexViewModel();
-            model.Categories = category;
+            model.Category = category;
             model.FilmsFromCategory = category.Films.ToList();
             var nowosci = db.Films.OrderByDescending(f => f.AddDate).Take(3);
             model.Top3NewestFilms = nowosci;
             return View(model); //category.Films.ToList()
+        }
+
+        public ActionResult Details(int id)
+        {
+            var film = db.Films.Find(id);
+            //Film film = db.Films.Find(id);
+            return View(film);
         }
 
         [ChildActionOnly] //zabezpieczenie, ze mozna ja wywolac tylko z poziomu innej akcji
@@ -36,6 +44,21 @@ namespace SklepUKW.Controllers
         {
             var categoryList = db.Categories.ToList();
             return PartialView("_CategoriesMenu", categoryList); //zwróc widok czastkowy
+        }
+
+        [ChildActionOnly]
+        public ActionResult FilmsFromCategory(string categoryName)
+        {
+            var category = db.Categories.Include("Films").Where(c => c.Name.ToLower() == categoryName.ToLower()).Single();
+            return PartialView("_FilmsFromCategory", category.Films.ToList());
+        }
+
+        public ActionResult Top3Longest()
+        {
+            IndexViewModel model = new IndexViewModel();
+            var najdluzsze = db.Films.OrderByDescending(f => f.FilmLength).Take(3);
+            model.Top3LongestFilms = najdluzsze;
+            return View(model);
         }
     }
 }

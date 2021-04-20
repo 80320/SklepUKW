@@ -151,6 +151,10 @@
     <Compile Include="Migrations\202104130837472_Date.designer.cs">
       <DependentUpon>202104130837472_Date.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104200821408_Migracja2004.cs" />
+    <Compile Include="Migrations\202104200821408_Migracja2004.designer.cs">
+      <DependentUpon>202104200821408_Migracja2004.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Film.cs" />
@@ -169,6 +173,8 @@
     <Content Include="Views\Home\metodyPlatnosci.cshtml" />
     <Content Include="Views\Films\List.cshtml" />
     <Content Include="Views\Shared\_CategoriesMenu.cshtml" />
+    <Content Include="Views\Films\Details.cshtml" />
+    <Content Include="Views\Films\_FilmsFromCategory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104130837472_Date.resx">
       <DependentUpon>202104130837472_Date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104200821408_Migracja2004.resx">
+      <DependentUpon>202104200821408_Migracja2004.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

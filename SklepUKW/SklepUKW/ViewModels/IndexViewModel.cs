@@ -8,10 +8,12 @@ namespace SklepUKW.ViewModels
 {
     public class IndexViewModel
     {
-        public Category Categories { get; set; }
+        public Category Category { get; set; }
 
         public IEnumerable<Film> FilmsFromCategory { get; set; } // lista filmow z danej kategorii
 
         public IEnumerable<Film> Top3NewestFilms { get; set; }
+
+        public IEnumerable<Film> Top3LongestFilms { get; set; }
     }
 }
