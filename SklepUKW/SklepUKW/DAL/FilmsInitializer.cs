@@ -139,7 +139,7 @@ namespace SklepUKW.DAL
                     Title = "Tylko nie mów nikomu",
                     Director = "Tomasz Sekielski",
                     Desc = "Dziennikarz śledczy rozmawia z dziewięcioma księżmi katolickimi, którzy dopuścili się zbrodni pedofilii i molestowania nieletnich, a także ich ofiarami.",
-                    Price = 0,
+                    Price = 27,
                     PosterName = "TylkoNieMow.jpg",
                     AddDate = new DateTime(2013,11,24),
                     FilmLength = 129

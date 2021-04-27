@@ -33,9 +33,9 @@ namespace SklepUKW.Controllers
             return View(cvm);
         }
 
-        public ActionResult AddToCart(int filmID)
+        public ActionResult AddToCart(int id)
         {
-            cartManager.AddToCart(filmID);
+            cartManager.AddToCart(id);
 
             return RedirectToAction("Index"); //w nawiasie string z nazwą akcji
         }

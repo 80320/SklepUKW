@@ -89,3 +89,4 @@ C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Microsoft.
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.xml
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.WebActivator.pdb
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.WebActivator.xml
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.csprojAssemblyReference.cache
