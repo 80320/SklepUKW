@@ -24,10 +24,10 @@
     @foreach(var film in @Model.FilmsFromCategory)
     {
         <tr>
-            <td><a href="@Url.Action("Details", "Films", new { id = film.FilmID})"><img src="@Url.PosterPath(film.PosterName)"/></a></td>
+            <td><a href="@Url.Action("Details", "Films", new {id = film.FilmID})"><img src="@Url.PosterPath(film.PosterName)"/></a></td>
             <td>@film.Title</td>
             <td>@film.Price</td>
-            <td>Dodaj do koszyka</td>
+            <td><a href="@Url.Action("AddToCart", "Cart", new {id = film.FilmID})">&#128722;</a></td>
         </tr>
     }
 <table>

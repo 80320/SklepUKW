@@ -69,7 +69,6 @@ C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\System.Web
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\System.Web.Helpers.xml
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\System.Web.Mvc.xml
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.csprojAssemblyReference.cache
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.csproj.CoreCompileInputs.cache
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.csproj.CopyComplete
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.dll
