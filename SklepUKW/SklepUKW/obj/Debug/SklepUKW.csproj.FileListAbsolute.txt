@@ -83,3 +83,10 @@ C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Glimpse.Co
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Glimpse.EF6.dll
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.Migrations.Date.resources
 C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\obj\Debug\SklepUKW.Migrations.Migracja2004.resources
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.dll
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.WebActivator.dll
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\WebActivatorEx.dll
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\Microsoft.Web.Administration.dll
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.xml
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.WebActivator.pdb
+C:\Users\eryba\source\repos\SklepInternetowyUKW\SklepUKW\SklepUKW\bin\MvcSiteMapProvider.WebActivator.xml
