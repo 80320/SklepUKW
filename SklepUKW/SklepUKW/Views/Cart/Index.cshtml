@@ -5,24 +5,54 @@
 }
 
 <h2>Twój koszyk</h2>
+<h3>@Html.MvcSiteMap().SiteMapPath()</h3>
 <table id="koszykTabela">
     @foreach (var item in @Model.CartItems)
     {
-        <tr>
+        <tr id="cartItem-@item.Film.FilmID">
             <td><a href="@Url.Action("Details", "Films", new { id = item.Film.FilmID })"><img src="@Url.PosterPath(item.Film.PosterName)" /></a></td>
             <td><a href="@Url.Action("Details", "Films", new { id = item.Film.FilmID })">@item.Film.Title</a></td>
-            <td>Ilość: @item.Quantity</td>
+            <td>Ilość:<span id="itemQuantity-@item.Film.FilmID">@item.Quantity</span> </td>
             <td>@item.Price zł</td>
-            <td><a href="link">&#128465;</a></td>
+            <td><a href="#" class="trash" data-id="@item.Film.FilmID">&#128465;</a></td>
         </tr>
     }
 </table>
 
 <div id="CenaCalkowita" style="">
-    Razem: @Model.TotalPrice zł
+    Razem: <span id="totalPrice"> @Model.TotalPrice </span> zł
 </div>
 
 <div class="SekcjaPrzyciski">
     <a class="PrzyciskLink" href="link">&#9755; Kontynuuj zakupy &#9754;</a>
     <a class="PrzyciskLink" href="link">&#9755; Zapłać &#9754;</a>
 </div>
+
+@section Scripts
+{
+
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+
+    <script type="text/javascript">
+
+        $(".trash").click(function () {
+            var id = $(this).data("id");
+            if (id != '') {
+                $.post("/Cart/RemoveFromCart", { "id": id }, function (response) {
+                    if (response.ItemQuantity == 0) {
+                        $("#cartItem-" + response.ItemID).fadeOut("slow");
+                    }
+                    else {
+                        $("#itemQuantity-" + response.ItemID).text(response.ItemQuantity);
+                    }
+
+                    $("#totalPrice").text(response.CartValue);
+                    $("#cartQuantity").text(response.CartQuantity);
+                });
+
+            }
+        });
+
+    </script>
+}

@@ -39,5 +39,23 @@ namespace SklepUKW.Controllers
 
             return RedirectToAction("Index"); //w nawiasie string z nazwą akcji
         }
+
+        public ActionResult RemoveFromCart(int id)
+        {
+            ItemRemoveViewModel model = new ItemRemoveViewModel()
+            {
+                ItemID = id,
+                ItemQuantity = cartManager.RemoveFromCart(id),
+                CartValue = cartManager.GetCartValue(),
+                CartQuantity = cartManager.GetCartQuantity()
+            };
+
+            return Json(model);
+        }
+
+        public int GetCartQuantity()
+        {
+            return cartManager.GetCartQuantity();
+        }
     }
 }
