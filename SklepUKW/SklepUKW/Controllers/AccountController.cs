@@ -75,12 +75,12 @@ namespace SklepUKW.Controllers
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken] // sposób zabezpieczania danych
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, UserData = new UserData() };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -106,7 +106,27 @@ namespace SklepUKW.Controllers
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error);
+            }     
+        }
+
+        public ActionResult Login(string ReturnUrl)
+        {
+            ViewBag.ReturnUrl = ReturnUrl;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string ReturnUrl, LoginViewModel model) //, LoginViewModel model
+        {
+            if(!ModelState.IsValid)
+            {
+                return View(model); //model
             }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            //return View();
         }
     }
 }

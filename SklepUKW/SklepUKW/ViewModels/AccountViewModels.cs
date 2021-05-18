@@ -8,11 +8,22 @@ namespace SklepUKW.ViewModels
 {
     public class LoginViewModel
     {
+        [EmailAddress(ErrorMessage = "Nieprawidłowy adres e-mail!")]
+        [Required(ErrorMessage = "Musisz podać Email!")]
+        public string Email { get; set; }
 
+        [DataType(DataType.Password)]
+        [Display(Name = "Hasło")]
+        [Required(ErrorMessage = "Musisz podać hasło!")]
+        public string Password { get; set; }
+
+        [Display(Name = "Zapamiętaj Mnie")]
+        public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
+        [EmailAddress(ErrorMessage = "Nieprawidłowy adres e-mail!")]
         [Required(ErrorMessage = "Musisz podać Email!")]
         public string Email { get; set; }
 
