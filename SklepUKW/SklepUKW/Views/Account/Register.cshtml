@@ -7,27 +7,34 @@
 @using (Html.BeginForm("Register", "Account"))
 {
     @Html.AntiForgeryToken()
-<fieldset>
-    <legend> Rejestracja </legend>
-    @Html.ValidationSummary("")
-    @Html.LabelFor(u => u.Email, "Email: ")
-    @Html.TextBoxFor(u => u.Email)
-    <br />
-    @Html.ValidationMessageFor(u => u.Email)
-    <br>
-    @Html.LabelFor(u => u.Password, "Hasło: ")
-    @Html.PasswordFor(u => u.Password)
-    <br />
-    @Html.ValidationMessageFor(u => u.Password)
-    <br>
-    @Html.LabelFor(u => u.ConfirmPassword, "Powtórz Hasło: ")
-    @Html.PasswordFor(u => u.ConfirmPassword)
-    <br />
-    @Html.ValidationMessageFor(u => u.ConfirmPassword)
-    <br>
-    <input type="submit" value="Zarejestruj" id="buttonRegister">
+    <fieldset>
+        <legend> Rejestracja </legend>
+        @Html.ValidationSummary("", new { @class = "error" })
+        @Html.LabelFor(u => u.Email, "Email: ")
+        @Html.TextBoxFor(u => u.Email)
+        <br />
+        <p class="error">@Html.ValidationMessageFor(u => u.Email)</p>
+        <br>
+        @Html.LabelFor(u => u.Password, "Hasło: ")
+        @Html.PasswordFor(u => u.Password)
+        <br />
+        <p class="error">@Html.ValidationMessageFor(u => u.Password)</p>
+        <br>
+        @Html.LabelFor(u => u.ConfirmPassword, "Powtórz Hasło: ")
+        @Html.PasswordFor(u => u.ConfirmPassword)
+        <br />
+        <p class="error">@Html.ValidationMessageFor(u => u.ConfirmPassword)</p>
+        <br>
+        <input type="submit" value="Zarejestruj" id="buttonRegister">
 
-</fieldset>
+    </fieldset>
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
 }
 
 

@@ -150,3 +150,8 @@ input {
     width: 150px;
     text-align: center;
 }
+
+.error{
+    color: darkred;
+    font-size: 15px;
+}
