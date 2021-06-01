@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SklepUKW.App_Start;
+using SklepUKW.Models;
 using SklepUKW.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ namespace SklepUKW.Controllers
         {
             ChangePasswordSuccess,
             ChangeUserDataSuccess,
+            DataError,
             Error
         }
 
@@ -63,6 +65,7 @@ namespace SklepUKW.Controllers
                 message == ManageMessageId.ChangePasswordSuccess ? "Hasło zostało zmienione."
                 : message == ManageMessageId.Error ? "Wystąpił błąd."
                 : message == ManageMessageId.ChangeUserDataSuccess ? "Dane użytkownika zostały zmienione."
+                : message == ManageMessageId.DataError ? "Wystąpił błąd z formularzem."
                 : "";
 
             var userId = User.Identity.GetUserId();
@@ -76,15 +79,14 @@ namespace SklepUKW.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
+        public async Task<ActionResult> ChangePassword(ManageViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 //return View(model);
-                return RedirectToAction("Index", new { Message = ManageMessageId.Error });
+                return RedirectToAction("Index", new { Message = ManageMessageId.DataError });
             }
-            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.ChangePasswordsViewModel.OldPassword, model.ChangePasswordsViewModel.NewPassword);
             if (result.Succeeded)
             {
                 var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
@@ -107,6 +109,22 @@ namespace SklepUKW.Controllers
             }
         }
 
-
+        [HttpPost]
+        public async Task<ActionResult> ChangeUserData(ManageViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index", new { Message = ManageMessageId.DataError });
+            }
+            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            user.UserData = model.UserData;
+            var result = await UserManager.UpdateAsync(user);
+            
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", new { Message = ManageMessageId.ChangeUserDataSuccess });
+            }
+            return RedirectToAction("Index", new { Message = ManageMessageId.Error });
+        }
     }
 }
